@@ -1,5 +1,5 @@
 <template>
-    <p>En dévellopement !</p>
+    <router-view />
 </template>
 
 <style scoped>

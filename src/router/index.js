@@ -1,7 +1,13 @@
 import { createWebHistory, createRouter } from "vue-router";
+import Home from "@/App.vue"
+import Map from "@/components/Map.vue"
 
 const routes = [
-	
+	{
+		name: "map",
+		path: "/map",
+		component: Map
+	},
 ];
 
 const router = createRouter({

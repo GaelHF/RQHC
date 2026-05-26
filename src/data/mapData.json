@@ -1,0 +1,37 @@
+[
+  {
+    "id": "rqhc",
+    "color": "#FF0000",
+
+    "points": [
+      [1384, 1426],
+      [1795, 1644],
+      [1748, 2026],
+      [1635, 2042],
+      [1582, 2180],
+      [1359, 2088],
+      [1201, 2251],
+      [1035, 2081],
+      [855, 2519],
+      [863, 2119]
+    ],
+
+    "data": {
+      "LongName": "Royaume du Québec et de l'Hudson Canadien",
+      "Owner": "Snax III",
+      "Allies" : [
+        "france",
+        "bretagne",
+        "normandie",
+        "rssRussie",
+        "ilesBaleares",
+        "guadeloupe",
+        "grandeIrelande"
+      ],
+      "Enemis": [],
+      "Alliances": ["ONU"],
+      "Members" : [],
+      "MembersCount": 0
+    }
+  }
+]
