@@ -73,7 +73,9 @@ onMounted(() => {
 
   })
 
-})
+}
+
+)
 </script>
 
 <template>
