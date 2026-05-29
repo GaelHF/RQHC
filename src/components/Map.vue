@@ -6,10 +6,19 @@ import territories from '@/data/mapData.json'
 
 import 'leaflet/dist/leaflet.css'
 
+let map = null
+
 onMounted(() => {
 
+  if (map) {
+     map.off()
+    map._container._leaflet_id = null 
+    map.remove()
+    map = null
+  }
+
   // Création de la carte
-  const map = L.map('map', {
+  map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: -2
   })
@@ -32,12 +41,10 @@ onMounted(() => {
   // Génération des territoires
   territories.forEach(territory => {
 
-    territory.points.forEach(point => {
-        point[0] = height - point[0]
-    })
+    const points = territory.points.map(point => [height - point[0], point[1]])
 
     const polygon = L.polygon(
-      territory.points,
+      points,
 
       {
         color: 'transparent',
