@@ -1,22 +1,79 @@
 @import './base.css';
 
-a,
-.green {
+/* ─── PALETTE WORLDERA-RQHC ─────────────────────────────── */
+:root {
+  --royal-dark:          #0d1117;
+  --royal-navy:          #111827;
+  --royal-navy-card:     #1c2539;
+  --royal-navy-elevated: #243047;
+
+  /* Cyan — accent principal (remplace l'or) */
+  --royal-gold:          #06b6d4;
+  --royal-gold-light:    #38bdf8;
+  --royal-gold-pale:     #7dd3fc;
+  --royal-gold-dark:     #0e7490;
+  --royal-gold-glow:     rgba(6, 182, 212, 0.28);
+
+  --royal-crimson:       #1d4ed8;   /* bleu WorldEra */
+
+  --royal-parchment:     #f1f5f9;
+  --royal-parchment-dim: #94a3b8;
+  --royal-text-muted:    #64748b;
+
+  --royal-border:        rgba(56, 189, 248, 0.10);
+  --royal-border-hover:  rgba(56, 189, 248, 0.28);
+  --royal-border-active: rgba(56, 189, 248, 0.55);
+
+  /* Couleurs bicolores RQHC */
+  --we-green:  #22c55e;
+  --we-blue:   #2563eb;
+  --we-purple: #5865f2;
+  --we-red:         #dc2626;
+  --we-red-mid:     #b91c1c;
+  --we-red-glow:    rgba(220, 38, 38, 0.30);
+}
+
+/* ─── BASE OVERRIDES ─────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--royal-dark);
+  color: var(--royal-parchment);
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  display: block;
+}
+
+/* ─── SCROLLBAR ──────────────────────────────────────────── */
+::-webkit-scrollbar            { width: 5px; }
+::-webkit-scrollbar-track      { background: var(--royal-dark); }
+::-webkit-scrollbar-thumb      { background: var(--royal-gold-dark); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover{ background: var(--royal-gold); }
+
+/* ─── SELECTION ──────────────────────────────────────────── */
+::selection {
+  background: rgba(6, 182, 212, 0.22);
+  color: var(--royal-gold-light);
+}
+
+/* ─── LIENS ──────────────────────────────────────────────── */
+a, .green {
+  color: var(--royal-gold);
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  padding: 0;
+  transition: color 0.2s ease;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+a:hover {
+  color: var(--royal-gold-light);
+  background-color: transparent;
 }
